@@ -1,0 +1,25 @@
+.slots-container {
+  height: 700px;
+  width: 400px;
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.slots-container .fruit-holder {
+  height: 80px;
+  width: 80px;
+  background: rgb(202, 202, 202);
+  border: 2px solid black;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slots-container .fruit-holder .fruit {
+  height: 50px;
+  width: 50px;
+}
+
+/*# sourceMappingURL=slots.css.map */

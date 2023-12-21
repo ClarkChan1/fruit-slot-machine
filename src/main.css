@@ -1,0 +1,21 @@
+@font-face {
+  font-family: puffy;
+  src: url("../fonts/Puffy.otf");
+}
+body {
+  background-color: rgba(140, 75, 43, 0.898);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(253, 235, 37);
+  font-family: puffy;
+}
+.main-container .title {
+  font-size: 46px;
+  letter-spacing: 2px;
+}
+
+/*# sourceMappingURL=main.css.map */

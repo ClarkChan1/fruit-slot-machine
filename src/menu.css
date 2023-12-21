@@ -1,0 +1,17 @@
+.menu-container .spin-button {
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  background: rgb(37, 162, 58);
+  padding: 20px;
+  border-radius: 20%;
+  box-shadow: 0 9px grey;
+}
+.menu-container .spin-button:active {
+  background: rgb(248, 50, 50);
+  box-shadow: 0 5px darkgrey;
+  transform: translateY(4px);
+}
+
+/*# sourceMappingURL=menu.css.map */
