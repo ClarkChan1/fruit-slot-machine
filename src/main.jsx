@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./main.css";
 import Slots from "./slots";
 import Menu from "./menu";
-import fruitMapping from "../globals";
+import { fruitMapping } from "../utils/globals";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

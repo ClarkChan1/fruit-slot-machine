@@ -3,18 +3,25 @@
   gap: 20px;
   width: 100%;
   justify-content: space-evenly;
+  align-items: center;
 }
 .menu-container .coins-container {
   display: flex;
   align-items: center;
+  flex: 1;
   gap: 10px;
+  background: black;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid rgb(253, 235, 37);
 }
 .menu-container .coins-container .coin-img {
   height: 25px;
   width: 25px;
 }
 .menu-container .coins-container p {
-  color: black;
+  margin: 0;
+  font-size: 30px;
 }
 .menu-container .spin-button {
   color: white;
@@ -22,13 +29,12 @@
   text-transform: uppercase;
   border: none;
   background: rgb(37, 162, 58);
-  padding: 20px;
-  border-radius: 20%;
-  box-shadow: 0 9px grey;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
 }
 .menu-container .spin-button:active {
   background: rgb(248, 50, 50);
-  box-shadow: 0 5px darkgrey;
   transform: translateY(4px);
 }
 

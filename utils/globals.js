@@ -9,4 +9,8 @@ let fruitMapping = {
   8: "/images/watermelon.svg",
 };
 
-export default fruitMapping;
+let costToPlay = 10;
+let twoMatchPrize = 25;
+let threeMatchPrize = 150;
+
+export { fruitMapping, costToPlay, twoMatchPrize, threeMatchPrize };

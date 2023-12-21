@@ -1,6 +1,13 @@
 import "./menu.css";
-import fruitMapping from "../globals";
+import {
+  fruitMapping,
+  costToPlay,
+  twoMatchPrize,
+  threeMatchPrize,
+} from "../utils/globals";
+import { useState } from "react";
 function Menu({ updateSlotValues }) {
+  const [coins, updateCoins] = useState(100);
   function handleSpin() {
     let newSlotValues = [];
     for (let i = 0; i < 3; i++) {
@@ -10,12 +17,30 @@ function Menu({ updateSlotValues }) {
     }
     updateSlotValues(newSlotValues);
     console.log("slotvalues: ", newSlotValues);
+    let newCoinValue = coins - costToPlay;
+    // check if all 3 match
+    if (
+      newSlotValues[0] == newSlotValues[1] &&
+      newSlotValues[0] == newSlotValues[2] &&
+      newSlotValues[1] == newSlotValues[2]
+    ) {
+      newCoinValue += threeMatchPrize;
+    }
+    // check if 2 match
+    else if (
+      newSlotValues[0] == newSlotValues[1] ||
+      newSlotValues[0] == newSlotValues[2] ||
+      newSlotValues[1] == newSlotValues[2]
+    ) {
+      newCoinValue += twoMatchPrize;
+    }
+    updateCoins(newCoinValue);
   }
   return (
     <div className="menu-container">
       <div className="coins-container">
         <img className="coin-img" src="/images/coin.svg" alt="" />
-        <p>100</p>
+        <p>{coins}</p>
       </div>
       <button className="spin-button" onClick={handleSpin}>
         Spin
