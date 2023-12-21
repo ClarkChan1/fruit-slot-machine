@@ -1,15 +1,15 @@
 import "./slots.css";
-function Slots() {
+function Slots({ slotValues }) {
   return (
     <div className="slots-container">
       <div className="fruit-holder">
-        <img className="fruit" src="../images/apple.svg" alt="" />
+        <img className="fruit" src={slotValues[0]} alt="" />
       </div>
       <div className="fruit-holder">
-        <img className="fruit" src="../images/grape.svg" alt="" />
+        <img className="fruit" src={slotValues[1]} alt="" />
       </div>
       <div className="fruit-holder">
-        <img className="fruit" src="../images/orange.svg" alt="" />
+        <img className="fruit" src={slotValues[2]} alt="" />
       </div>
     </div>
   );
