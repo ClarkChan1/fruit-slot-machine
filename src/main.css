@@ -11,11 +11,18 @@ body {
   flex-direction: column;
   align-items: center;
   color: rgb(253, 235, 37);
-  font-family: puffy;
 }
 .main-container .title {
   font-size: 46px;
   letter-spacing: 2px;
+}
+.main-container .game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background-color: beige;
+  padding: 20px 40px;
 }
 
 /*# sourceMappingURL=main.css.map */

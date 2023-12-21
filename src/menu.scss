@@ -1,5 +1,19 @@
 .menu-container {
-  .coins {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-evenly;
+  .coins-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .coin-img {
+      height: 25px;
+      width: 25px;
+    }
+    p {
+      color: black;
+    }
   }
   .spin-button {
     color: white;

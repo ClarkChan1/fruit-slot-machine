@@ -13,7 +13,10 @@ function Menu({ updateSlotValues }) {
   }
   return (
     <div className="menu-container">
-      <div className="coins"></div>
+      <div className="coins-container">
+        <img className="coin-img" src="/images/coin.svg" alt="" />
+        <p>100</p>
+      </div>
       <button className="spin-button" onClick={handleSpin}>
         Spin
       </button>

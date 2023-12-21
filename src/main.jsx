@@ -20,8 +20,10 @@ function Main() {
   return (
     <div className="main-container">
       <p className="title">Fruit Slot Machine</p>
-      <Slots slotValues={slotValues} />
-      <Menu updateSlotValues={updateSlotValues} />
+      <div className="game-container">
+        <Slots slotValues={slotValues} />
+        <Menu updateSlotValues={updateSlotValues} />
+      </div>
     </div>
   );
 }
