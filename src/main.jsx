@@ -13,20 +13,28 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 );
 
 function Main() {
-  const [slotValues, updateSlotValues] = useState([
-    fruitMapping[1],
-    fruitMapping[1],
-    fruitMapping[1],
-  ]);
+  const [slot1, updateSlot1] = useState([fruitMapping[1]]);
+  const [slot2, updateSlot2] = useState([fruitMapping[1]]);
+  const [slot3, updateSlot3] = useState([fruitMapping[1]]);
+  const [isSpinning, updateIsSpinning] = useState(false);
   const [message, updateMessage] = useState("press spin to play");
   return (
     <div className="main-container">
       <p className="title">Fruit Slot Machine</p>
       <div className="game-container">
         <Message message={message} />
-        <Slots slotValues={slotValues} />
+        <Slots
+          isSpinning={isSpinning}
+          slot1={slot1}
+          slot2={slot2}
+          slot3={slot3}
+        />
         <Menu
-          updateSlotValues={updateSlotValues}
+          updateSlot1={updateSlot1}
+          updateSlot2={updateSlot2}
+          updateSlot3={updateSlot3}
+          isSpinning={isSpinning}
+          updateIsSpinning={updateIsSpinning}
           updateMessage={updateMessage}
         />
       </div>

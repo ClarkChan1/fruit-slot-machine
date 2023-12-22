@@ -39,4 +39,9 @@
     background: rgb(248, 50, 50);
     transform: translateY(4px);
   }
+  .disabled {
+    pointer-events: none;
+    background: rgb(248, 50, 50);
+    transform: translateY(4px);
+  }
 }

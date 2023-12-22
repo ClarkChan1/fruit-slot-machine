@@ -40,5 +40,10 @@
   background: rgb(248, 50, 50);
   transform: translateY(4px);
 }
+.menu-container .disabled {
+  pointer-events: none;
+  background: rgb(248, 50, 50);
+  transform: translateY(4px);
+}
 
 /*# sourceMappingURL=menu.css.map */

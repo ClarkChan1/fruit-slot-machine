@@ -6,18 +6,31 @@ import {
   threeMatchPrize,
 } from "../utils/globals";
 import { useState } from "react";
-function Menu({ updateSlotValues, updateMessage }) {
+function Menu({
+  updateSlot1,
+  updateSlot2,
+  updateSlot3,
+  isSpinning,
+  updateIsSpinning,
+  updateMessage,
+}) {
   const [coins, updateCoins] = useState(100);
   function handleSpin() {
+    let newCoinValue = coins - costToPlay;
+    updateIsSpinning(true);
+    updateMessage("spinning...");
+    updateCoins(newCoinValue);
+    updateSlot1("blank");
+    updateSlot2("blank");
+    updateSlot3("blank");
     let newSlotValues = [];
     for (let i = 0; i < 3; i++) {
       let slotValue = Math.floor(Math.random() * 8) + 1;
       let imgSrc = fruitMapping[slotValue];
       newSlotValues.push(imgSrc);
     }
-    updateSlotValues(newSlotValues);
+
     console.log("slotvalues: ", newSlotValues);
-    let newCoinValue = coins - costToPlay;
     let newMessage = "";
     // check if all 3 match
     if (
@@ -39,8 +52,19 @@ function Menu({ updateSlotValues, updateMessage }) {
     } else {
       newMessage = "no match";
     }
-    updateCoins(newCoinValue);
-    updateMessage(newMessage);
+
+    setTimeout(() => {
+      updateSlot1(newSlotValues[0]);
+    }, 1000);
+    setTimeout(() => {
+      updateSlot2(newSlotValues[1]);
+    }, 1500);
+    setTimeout(() => {
+      updateSlot3(newSlotValues[2]);
+      updateCoins(newCoinValue);
+      updateMessage(newMessage);
+      updateIsSpinning(false);
+    }, 2000);
   }
   return (
     <div className="menu-container">
@@ -48,8 +72,11 @@ function Menu({ updateSlotValues, updateMessage }) {
         <img className="coin-img" src="/images/coin.svg" alt="" />
         <p>{coins}</p>
       </div>
-      <button className="spin-button" onClick={handleSpin}>
-        Spin
+      <button
+        className={"spin-button " + (isSpinning ? "disabled" : "")}
+        onClick={handleSpin}
+      >
+        {isSpinning ? "--" : "Spin"}
       </button>
     </div>
   );

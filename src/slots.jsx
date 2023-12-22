@@ -1,15 +1,27 @@
 import "./slots.css";
-function Slots({ slotValues }) {
+function Slots({ slot1, slot2, slot3 }) {
   return (
     <div className="slots-container">
       <div className="fruit-holder">
-        <img className="fruit" src={slotValues[0]} alt="" />
+        <img
+          className={"fruit " + (slot1 == "blank" ? "hide-img" : "")}
+          src={slot1}
+          alt=""
+        />
       </div>
       <div className="fruit-holder">
-        <img className="fruit" src={slotValues[1]} alt="" />
+        <img
+          className={"fruit " + (slot2 == "blank" ? "hide-img" : "")}
+          src={slot2}
+          alt=""
+        />
       </div>
       <div className="fruit-holder">
-        <img className="fruit" src={slotValues[2]} alt="" />
+        <img
+          className={"fruit " + (slot3 == "blank" ? "hide-img" : "")}
+          src={slot3}
+          alt=""
+        />
       </div>
     </div>
   );

@@ -19,5 +19,8 @@
   height: 50px;
   width: 50px;
 }
+.slots-container .fruit-holder .hide-img {
+  display: none;
+}
 
 /*# sourceMappingURL=slots.css.map */
