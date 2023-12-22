@@ -1,8 +1,26 @@
-# React + Vite
+# Fruit Slot Machine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Take home assessment for Age Bold
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. clone repo
+
+2. ```
+   npm install
+   ```
+
+3. ```
+   npm run dev
+   ```
+
+## technologies used
+
+React
+JavaScript
+SCSS
+
+## Design Decisions
+
+1. To make it realistic I created a lose condition when coins goes to 0 or below. If the user loses, they will be prompted to play again.
+2. I decided not to make a win condition, because in real casinos you can play as much as you want.

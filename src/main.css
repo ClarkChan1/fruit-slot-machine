@@ -2,6 +2,10 @@
   font-family: puffy;
   src: url("../fonts/Puffy.otf");
 }
+@font-face {
+  font-family: pixel;
+  src: url("../fonts/Pixel.ttf");
+}
 body {
   background-color: rgba(140, 75, 43, 0.898);
 }
@@ -15,13 +19,15 @@ body {
 .main-container .title {
   font-size: 46px;
   letter-spacing: 2px;
+  font-family: puffy;
 }
 .main-container .game-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  background-color: beige;
+  background-color: rgb(253, 235, 37);
+  border-radius: 8px;
   padding: 20px 40px;
 }
 

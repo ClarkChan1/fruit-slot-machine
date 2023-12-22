@@ -1,12 +1,14 @@
 .slots-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  width: 100%;
+
   gap: 10px;
   .fruit-holder {
     height: 80px;
     width: 80px;
-    background: rgb(202, 202, 202);
+    background: rgb(214, 241, 255);
     border: 2px solid black;
     border-radius: 6px;
     display: flex;

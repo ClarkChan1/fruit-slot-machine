@@ -6,7 +6,7 @@ import {
   threeMatchPrize,
 } from "../utils/globals";
 import { useState } from "react";
-function Menu({ updateSlotValues }) {
+function Menu({ updateSlotValues, updateMessage }) {
   const [coins, updateCoins] = useState(100);
   function handleSpin() {
     let newSlotValues = [];
@@ -18,6 +18,7 @@ function Menu({ updateSlotValues }) {
     updateSlotValues(newSlotValues);
     console.log("slotvalues: ", newSlotValues);
     let newCoinValue = coins - costToPlay;
+    let newMessage = "";
     // check if all 3 match
     if (
       newSlotValues[0] == newSlotValues[1] &&
@@ -25,6 +26,7 @@ function Menu({ updateSlotValues }) {
       newSlotValues[1] == newSlotValues[2]
     ) {
       newCoinValue += threeMatchPrize;
+      newMessage = "Jackpot!!!";
     }
     // check if 2 match
     else if (
@@ -33,8 +35,12 @@ function Menu({ updateSlotValues }) {
       newSlotValues[1] == newSlotValues[2]
     ) {
       newCoinValue += twoMatchPrize;
+      newMessage = "2 match!";
+    } else {
+      newMessage = "no match";
     }
     updateCoins(newCoinValue);
+    updateMessage(newMessage);
   }
   return (
     <div className="menu-container">

@@ -1,0 +1,15 @@
+.message-container {
+  color: beige;
+  background: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  p {
+    margin: 0;
+    padding: 10px 20px;
+    font-family: pixel;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}

@@ -7,13 +7,13 @@
 }
 .menu-container .coins-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   flex: 1;
   gap: 10px;
   background: black;
   padding: 10px;
   border-radius: 6px;
-  border: 2px solid rgb(253, 235, 37);
 }
 .menu-container .coins-container .coin-img {
   height: 25px;
@@ -24,13 +24,16 @@
   font-size: 30px;
 }
 .menu-container .spin-button {
-  color: white;
+  color: beige;
+  font-weight: bold;
+  font-size: 16px;
   letter-spacing: 2px;
   text-transform: uppercase;
   border: none;
   background: rgb(37, 162, 58);
-  height: 80px;
-  width: 80px;
+  border: 2px black solid;
+  height: 70px;
+  width: 70px;
   border-radius: 50%;
 }
 .menu-container .spin-button:active {
