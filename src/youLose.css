@@ -25,14 +25,22 @@
 }
 .you-lose-container .play-again-container .play-button {
   cursor: pointer;
+  animation: blink 2s steps(5, start) infinite;
   padding: 10px;
 }
 .you-lose-container .play-again-container .play-button:hover {
   color: black;
   background: beige;
+  animation-play-state: paused;
 }
 .you-lose-container .play-again-container p {
   margin: 0;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
 }
 
 /*# sourceMappingURL=youLose.css.map */

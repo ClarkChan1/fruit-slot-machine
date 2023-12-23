@@ -2,7 +2,7 @@ import "./youLose.css";
 function YouLose({ resetGame, stats }) {
   return (
     <div className="you-lose-container">
-      <p className="title">No More Coins!</p>
+      <p className="title">No More Tokens!</p>
       <div className="stats-container">
         <div className="stat-row">
           <p>Rolls</p>

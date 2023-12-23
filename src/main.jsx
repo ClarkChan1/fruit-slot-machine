@@ -11,6 +11,7 @@ import {
   defaultStats,
 } from "../utils/globals";
 import YouLose from "./youLose";
+import Rules from "./rules";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -27,7 +28,7 @@ function Main() {
   const [message, updateMessage] = useState(defaultMessage);
   const [youLose, updateYouLose] = useState(false);
   const [stats, updateStats] = useState(defaultStats);
-
+  const [showRules, updateShowRules] = useState(false);
   function resetGame() {
     console.log("reset game called");
     updateCoins(defaultCoins);
@@ -40,6 +41,8 @@ function Main() {
   }
   return youLose ? (
     <YouLose stats={stats} resetGame={resetGame} />
+  ) : showRules ? (
+    <Rules updateShowRules={updateShowRules} />
   ) : (
     <div className="main-container">
       <p className="title">Fruit Slot Machine</p>
@@ -63,6 +66,9 @@ function Main() {
           updateYouLose={updateYouLose}
           updateStats={updateStats}
         />
+      </div>
+      <div className="help-container" onClick={() => updateShowRules(true)}>
+        <p>Rules</p>
       </div>
     </div>
   );
