@@ -66,9 +66,11 @@ function Main() {
           updateYouLose={updateYouLose}
           updateStats={updateStats}
         />
-      </div>
-      <div className="help-container" onClick={() => updateShowRules(true)}>
-        <p>Rules</p>
+        <div className="help-wrapper">
+          <div className="help-container" onClick={() => updateShowRules(true)}>
+            <p>Rules</p>
+          </div>
+        </div>
       </div>
     </div>
   );
