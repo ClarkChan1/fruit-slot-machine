@@ -13,5 +13,14 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+.message-container .fast-blink {
+  animation: fastBlink 1s steps(5, start) infinite;
+}
+
+@keyframes fastBlink {
+  to {
+    visibility: hidden;
+  }
+}
 
 /*# sourceMappingURL=message.css.map */

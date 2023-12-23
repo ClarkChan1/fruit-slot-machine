@@ -23,6 +23,7 @@ function Main() {
   const [slot1, updateSlot1] = useState(defaultSlot1);
   const [slot2, updateSlot2] = useState(defaultSlot1);
   const [slot3, updateSlot3] = useState(defaultSlot1);
+  const [slotMatches, updateSlotMatches] = useState([0, 0, 0]);
   const [coins, updateCoins] = useState(defaultCoins);
   const [isSpinning, updateIsSpinning] = useState(false);
   const [message, updateMessage] = useState(defaultMessage);
@@ -35,6 +36,7 @@ function Main() {
     updateSlot1(defaultSlot1);
     updateSlot2(defaultSlot1);
     updateSlot3(defaultSlot1);
+    updateSlotMatches([0, 0, 0]);
     updateMessage(defaultMessage);
     updateStats(defaultStats);
     updateYouLose(false);
@@ -53,11 +55,13 @@ function Main() {
           slot1={slot1}
           slot2={slot2}
           slot3={slot3}
+          slotMatches={slotMatches}
         />
         <Menu
           updateSlot1={updateSlot1}
           updateSlot2={updateSlot2}
           updateSlot3={updateSlot3}
+          updateSlotMatches={updateSlotMatches}
           coins={coins}
           updateCoins={updateCoins}
           isSpinning={isSpinning}

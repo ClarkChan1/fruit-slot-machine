@@ -10,6 +10,7 @@ function Menu({
   updateSlot1,
   updateSlot2,
   updateSlot3,
+  updateSlotMatches,
   coins,
   updateCoins,
   isSpinning,
@@ -34,10 +35,12 @@ function Menu({
       updateIsSpinning(true);
       updateMessage("spinning...");
       updateCoins(newCoinValue);
+      updateSlotMatches([0, 0, 0]);
       updateSlot1("blank");
       updateSlot2("blank");
       updateSlot3("blank");
       let newSlotValues = [];
+      let newSlotMatches = [0, 0, 0];
       for (let i = 0; i < 3; i++) {
         let slotValue = Math.floor(Math.random() * 8) + 1;
         let imgSrc = fruitMapping[slotValue];
@@ -55,6 +58,7 @@ function Menu({
         newMessage = "Jackpot!!!";
         statChanges.jackpot = 1;
         statChanges.coinsEarned = 150;
+        newSlotMatches = [1, 1, 1];
       }
       // check if 2 match
       else if (
@@ -66,6 +70,14 @@ function Menu({
         newMessage = "2 match!";
         statChanges.match2 = 1;
         statChanges.coinsEarned = 25;
+        // find which two match
+        if (newSlotValues[0] == newSlotValues[1]) {
+          newSlotMatches = [1, 1, 0];
+        } else if (newSlotValues[0] == newSlotValues[2]) {
+          newSlotMatches = [1, 0, 1];
+        } else {
+          newSlotMatches = [0, 1, 1];
+        }
       } else {
         newMessage = "no match";
       }
@@ -80,6 +92,7 @@ function Menu({
         updateSlot3(newSlotValues[2]);
         updateCoins(newCoinValue);
         updateMessage(newMessage);
+        updateSlotMatches(newSlotMatches);
         updateStats((prevStats) => ({
           ...prevStats,
           rolls: prevStats.rolls + statChanges.rolls,

@@ -22,5 +22,35 @@
 .slots-container .fruit-holder .hide-img {
   display: none;
 }
+.slots-container .jackpot {
+  animation: rainbowMove 3s linear infinite;
+}
+.slots-container .match2 {
+  background: rgb(52, 241, 131);
+}
+
+@keyframes rainbowMove {
+  0% {
+    background: rgb(255, 118, 118);
+  }
+  16.66% {
+    background: rgb(255, 189, 109);
+  }
+  33.33% {
+    background: rgb(248, 255, 112);
+  }
+  50% {
+    background: rgb(125, 255, 113);
+  }
+  66.66% {
+    background: rgb(100, 165, 255);
+  }
+  83.33% {
+    background: rgb(187, 110, 255);
+  }
+  100% {
+    background: rgb(255, 118, 118);
+  }
+}
 
 /*# sourceMappingURL=slots.css.map */
