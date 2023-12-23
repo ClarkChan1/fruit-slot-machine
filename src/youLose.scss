@@ -1,0 +1,38 @@
+.you-lose-container {
+  color: beige;
+  background: black;
+  padding: 20px 40px;
+  font-size: 24px;
+  font-family: pixel;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .title {
+    margin: 0;
+    font-size: 46px;
+  }
+  .stats-container {
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .play-again-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    .play-button {
+      cursor: pointer;
+      padding: 10px;
+    }
+    .play-button:hover {
+      color: black;
+      background: beige;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.you-lose-container {
+  color: beige;
+  background: black;
+  padding: 20px 40px;
+  font-size: 24px;
+  font-family: pixel;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.you-lose-container .title {
+  margin: 0;
+  font-size: 46px;
+}
+.you-lose-container .stats-container .stat-row {
+  display: flex;
+  justify-content: space-between;
+}
+.you-lose-container .play-again-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.you-lose-container .play-again-container .play-button {
+  cursor: pointer;
+  padding: 10px;
+}
+.you-lose-container .play-again-container .play-button:hover {
+  color: black;
+  background: beige;
+}
+.you-lose-container .play-again-container p {
+  margin: 0;
+}
+
+/*# sourceMappingURL=youLose.css.map */
