@@ -6,6 +6,10 @@
   font-family: pixel;
   src: url("../fonts/Pixel.ttf");
 }
+html {
+  font-size: 8px;
+}
+
 body {
   background-color: rgba(140, 75, 43, 0.898);
 }
@@ -19,7 +23,7 @@ body {
   color: rgb(253, 235, 37);
 }
 .main-container .title {
-  font-size: 46px;
+  font-size: 3rem;
   letter-spacing: 2px;
   font-family: puffy;
   margin: 0;
@@ -29,11 +33,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 400px;
-  gap: 40px;
+  width: 30rem;
+  gap: 3rem;
   background-color: rgb(253, 235, 37);
   border-radius: 8px;
-  padding: 20px 40px;
+  padding: 2rem 4rem;
 }
 .main-container .game-container .help-wrapper {
   position: absolute;
@@ -59,6 +63,32 @@ body {
 }
 .main-container .game-container .help-wrapper .help-container:hover {
   background-color: rgb(80, 200, 255);
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1201px) {
+  html {
+    font-size: 20px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

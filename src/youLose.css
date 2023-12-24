@@ -2,7 +2,7 @@
   color: beige;
   background: black;
   padding: 20px 40px;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: pixel;
   letter-spacing: 2px;
   display: flex;
@@ -11,7 +11,8 @@
 }
 .you-lose-container .title {
   margin: 0;
-  font-size: 46px;
+  font-size: 3rem;
+  text-align: center;
 }
 .you-lose-container .stats-container .stat-row {
   display: flex;

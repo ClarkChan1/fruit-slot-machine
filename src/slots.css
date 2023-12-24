@@ -3,11 +3,11 @@
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  gap: 10px;
+  gap: 1.5rem;
 }
 .slots-container .fruit-holder {
-  height: 80px;
-  width: 80px;
+  height: 9rem;
+  width: 9rem;
   background: rgb(214, 241, 255);
   border: 2px solid black;
   border-radius: 6px;
@@ -16,8 +16,8 @@
   align-items: center;
 }
 .slots-container .fruit-holder .fruit {
-  height: 50px;
-  width: 50px;
+  height: 6rem;
+  width: 6rem;
 }
 .slots-container .fruit-holder .hide-img {
   display: none;
