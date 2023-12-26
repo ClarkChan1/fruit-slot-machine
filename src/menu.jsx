@@ -119,6 +119,9 @@ function Menu({
       >
         {isSpinning ? "--" : "Spin"}
       </button>
+      <div className="help-container" onClick={() => updateShowRules(true)}>
+        <p>Rules</p>
+      </div>
     </div>
   );
 }

@@ -2,17 +2,17 @@
   display: flex;
   gap: 2rem;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 .menu-container .coins-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex: 1;
-  gap: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
   background: black;
-  padding: 10px;
+  padding: 0.75rem;
   border-radius: 6px;
 }
 .menu-container .coins-container .coin-img {
@@ -30,11 +30,15 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   border: none;
-  background: rgb(37, 162, 58);
+  background: rgb(29, 131, 46);
   border: 2px black solid;
   height: 6rem;
   width: 6rem;
   border-radius: 50%;
+  cursor: pointer;
+}
+.menu-container .spin-button:hover {
+  background: rgb(38, 191, 63);
 }
 .menu-container .spin-button:active {
   background: rgb(248, 50, 50);
@@ -44,6 +48,27 @@
   pointer-events: none;
   background: rgb(248, 50, 50);
   transform: translateY(4px);
+}
+.menu-container .help-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: rgb(37, 185, 253);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem 1.5rem;
+  border: 2px solid black;
+  cursor: pointer;
+}
+.menu-container .help-container p {
+  margin: 0;
+  color: black;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+.menu-container .help-container:hover {
+  background-color: rgb(80, 200, 255);
 }
 
 /*# sourceMappingURL=menu.css.map */
