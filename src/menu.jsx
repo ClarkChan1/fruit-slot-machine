@@ -113,12 +113,14 @@ function Menu({
         <img className="coin-img" src="/images/coin.svg" alt="" />
         <p>{coins}</p>
       </div>
-      <button
-        className={"spin-button " + (isSpinning ? "disabled" : "")}
-        onClick={handleSpin}
-      >
-        {isSpinning ? "--" : "Spin"}
-      </button>
+      <div className="spin-button-container">
+        <button
+          className={"spin-button " + (isSpinning ? "disabled" : "")}
+          onClick={handleSpin}
+        >
+          {isSpinning ? "--" : "Spin"}
+        </button>
+      </div>
       <div className="help-container" onClick={() => updateShowRules(true)}>
         <p>Rules</p>
       </div>
