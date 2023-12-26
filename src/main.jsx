@@ -69,9 +69,9 @@ function Main() {
           updateMessage={updateMessage}
           updateYouLose={updateYouLose}
           updateStats={updateStats}
+          updateShowRules={updateShowRules}
         />
       </div>
-      <div className="help-wrapper"></div>
     </div>
   );
 }

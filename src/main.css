@@ -39,27 +39,6 @@ body {
   border-radius: 8px;
   padding: 2rem 4rem;
 }
-.main-container .help-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-.main-container .help-wrapper .help-container {
-  width: fit-content;
-  border-radius: 8px;
-  background-color: rgb(37, 185, 253);
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 1rem 1.5rem;
-  cursor: pointer;
-}
-.main-container .help-wrapper .help-container p {
-  margin: 0;
-  color: black;
-  font-size: 2rem;
-  letter-spacing: 2px;
-}
-.main-container .help-wrapper .help-container:hover {
-  background-color: rgb(80, 200, 255);
-}
 
 @media (min-width: 320px) and (max-width: 480px) {
   html {

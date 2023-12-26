@@ -18,6 +18,7 @@ function Menu({
   updateMessage,
   updateYouLose,
   updateStats,
+  updateShowRules,
 }) {
   function hasCoins() {
     return coins >= 10;
