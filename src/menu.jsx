@@ -5,7 +5,6 @@ import {
   twoMatchPrize,
   threeMatchPrize,
 } from "../utils/globals";
-import { useState } from "react";
 function Menu({
   updateSlot1,
   updateSlot2,
@@ -44,8 +43,7 @@ function Menu({
       let newSlotMatches = [0, 0, 0];
       for (let i = 0; i < 3; i++) {
         let slotValue = Math.floor(Math.random() * 8) + 1;
-        let imgSrc = fruitMapping[slotValue];
-        newSlotValues.push(imgSrc);
+        newSlotValues.push(slotValue);
       }
 
       let newMessage = "";
@@ -84,13 +82,13 @@ function Menu({
       }
 
       setTimeout(() => {
-        updateSlot1(newSlotValues[0]);
+        updateSlot1(fruitMapping[newSlotValues[0]]);
       }, 1000);
       setTimeout(() => {
-        updateSlot2(newSlotValues[1]);
+        updateSlot2(fruitMapping[newSlotValues[1]]);
       }, 1500);
       setTimeout(() => {
-        updateSlot3(newSlotValues[2]);
+        updateSlot3(fruitMapping[newSlotValues[2]]);
         updateCoins(newCoinValue);
         updateMessage(newMessage);
         updateSlotMatches(newSlotMatches);
